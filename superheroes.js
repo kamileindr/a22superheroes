@@ -508,3 +508,22 @@ alert(
 console.table(superheroes);
 
 /* write your code here */
+superheroes.forEach(superheroes);
+function showProduct(superheroes) {
+  const template = document.querySelector("template").content;
+  const clone = template.cloneNode(true);
+  clone.querySelector(".alias").textContent = superheroes.alias;
+  clone.querySelector(".abilities").textContent = superheroes.abilities;
+  clone.querySelector(".primaryColor").textContent = superheroes.primaryColor;
+  clone.querySelector(".enemies").textContent = superheroes.enemies;
+  clone.querySelector(".hasCape").textContent = superheroes.hasCape;
+  clone.querySelector(".weakness").textContent = superheroes.weakness;
+  clone.querySelector(".speed").textContent = superheroes.speed;
+  clone.querySelector(".dob").textContent = superheroes.dob;
+  clone.querySelector(".month").textContent = superheroes.dob.month;
+  clone.querySelector(".day").textContent = superheroes.dob.day;
+  clone.querySelector(".year").textContent = superheroes.dob.year;
+  clone.querySelector(".img").textContent = superheroes.img;
+  const parent = document.querySelector("body");
+  parent.appendChild(clone);
+}
